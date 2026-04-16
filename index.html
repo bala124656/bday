@@ -1,128 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday Siya 💖</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: url('https://instagram.fblr1-7.fna.fbcdn.net/v/t1.15752-9/673353634_3149168642137916_7757345522841051120_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=107&ccb=7-5&_nc_sid=fc17b8&efg=eyJxZV9ncm91cHMiOlsiaWdkX2Jlc3RfZWZmb3J0X2ltYWdlOnRlc3QiXX0%3D&_nc_ohc=ryXpEEhiRyEQ7kNvwEX5-zQ&_nc_oc=AdpToKhuxRAp0q-tYmg3cbXgtvY7VRJzKS-rNhpWB5KTVtt9EeU9Gwzkj4bP-CPFtyEohr79Gkr5vfultR5B5hk-&_nc_zt=23&_nc_ht=instagram.fblr1-7.fna&_nc_ss=7a2a8&oh=03_Q7cD5AGvpqz7YS5Iat7MS-LRTyrn_ueXbLRYLUIeeVaTsfOyqQ&oe=6A07D787') no-repeat center/cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
-
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(255, 255, 255, 0.6);
-      backdrop-filter: blur(6px);
-      z-index: 0;
-    }
-
-    .card {
-      position: relative;
-      z-index: 1;
-      background: rgba(255,255,255,0.9);
-      padding: 25px;
-      border-radius: 25px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-      text-align: center;
-      max-width: 350px;
-      animation: fadeIn 2s ease;
-    }
-
-    h1 {
-      color: #ff4d88;
-    }
-
-    p {
-      color: #444;
-      font-size: 15px;
-    }
-
-    button {
-      margin-top: 15px;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 20px;
-      background: #ff4d88;
-      color: white;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    button:hover {
-      background: #e6005c;
-    }
-
-    .hidden {
-      display: none;
-      margin-top: 15px;
-      animation: fadeIn 2s ease;
-    }
-
-    .gallery {
-      margin-top: 15px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-    }
-
-    .gallery img {
-      width: 100%;
-      border-radius: 12px;
-      object-fit: cover;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px);} 
-      to { opacity: 1; transform: translateY(0);} 
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siya 💖</title>
+<style>
+body{margin:0;font-family:'Segoe UI',sans-serif;background:url('Yhttps://instagram.fblr1-7.fna.fbcdn.net/v/t1.15752-9/673353634_3149168642137916_7757345522841051120_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=107&ccb=7-5&_nc_sid=fc17b8&efg=eyJxZV9ncm91cHMiOlsiaWdkX2Jlc3RfZWZmb3J0X2ltYWdlOnRlc3QiXX0%3D&_nc_ohc=ryXpEEhiRyEQ7kNvwEX5-zQ&_nc_oc=AdpToKhuxRAp0q-tYmg3cbXgtvY7VRJzKS-rNhpWB5KTVtt9EeU9Gwzkj4bP-CPFtyEohr79Gkr5vfultR5B5hk-&_nc_zt=23&_nc_ht=instagram.fblr1-7.fna&_nc_ss=7a2a8&oh=03_Q7cD5AGvpqz7YS5Iat7MS-LRTyrn_ueXbLRYLUIeeVaTsfOyqQ&oe=6A07D787') center/cover no-repeat;}
+.overlay{position:fixed;inset:0;background:rgba(255,255,255,0.6);backdrop-filter:blur(6px);}
+.container{position:relative;z-index:1;min-height:100vh;display:flex;align-items:center;justify-content:center;}
+.card{background:rgba(255,255,255,0.9);padding:25px;border-radius:25px;box-shadow:0 10px 30px rgba(0,0,0,0.2);max-width:380px;text-align:center;}
+h1{color:#ff4d88}
+button{margin:8px;padding:10px 18px;border:none;border-radius:20px;background:#ff4d88;color:white;cursor:pointer}
+button:hover{background:#e6005c}
+.page{display:none}
+.active{display:block}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.gallery img{width:100%;border-radius:10px}
+/* simple animation */
+.scene{height:200px;position:relative;overflow:hidden;background:#fff;border-radius:15px;margin-top:15px}
+.char{position:absolute;bottom:10px;font-size:30px}
+#you{left:-50px;animation:moveRight 6s linear infinite}
+#siya{right:-50px;animation:moveLeft 6s linear infinite}
+@keyframes moveRight{0%{left:-50px}50%{left:40%}100%{left:40%}}
+@keyframes moveLeft{0%{right:-50px}50%{right:40%}100%{right:40%}}
+</style>
 </head>
 <body>
-
 <div class="overlay"></div>
+<div class="container">
 
-<div class="card">
-  <h1>Happy Birthday Siya 🎂</h1>
-  <p>To my favorite person 💕</p>
-  <button onclick="showMessage()">Click me 💌</button>
+<!-- HOME -->
+<div id="home" class="card page active">
+<h1>Hi Siya 🎂💖</h1>
+<p>I made this just for you</p>
+<button onclick="showPage('about')">About You 💌</button>
+<button onclick="showPage('story')">Our Story 🎥</button>
+<button onclick="showPage('homeMessage')">Message 💖</button>
+</div>
 
-  <div id="message" class="hidden">
-    <p>
-      Hey Siya 💖<br><br>
-      I know I can't be there with you, but I made this little place just for you.
-      <br><br>
-      These past 3 years with you mean more than you think, and I wouldn't trade this friendship for anything.
-      <br><br>
-      I hope this makes you smile at least a little 😊
-      <br><br>
-      Happy Birthday again 🫶
-    </p>
+<!-- MESSAGE PAGE -->
+<div id="homeMessage" class="card page">
+<h1>For You 💕</h1>
+<p>Hey Siya 💖<br><br>
+3 years with you has been something I’d never trade for anything.<br>
+You’re genuinely one of the most important people in my life.<br><br>
+Happy Birthday 🫶</p>
+<button onclick="showPage('home')">⬅ Back</button>
+</div>
 
-    <div class="gallery">
-      <!-- ADD YOUR PHOTOS BELOW -->
-      <img src="https://instagram.fblr1-10.fna.fbcdn.net/v/t1.15752-9/551096779_1100038985551211_8668474978410735977_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=109&ccb=7-5&_nc_sid=fc17b8&efg=eyJxZV9ncm91cHMiOlsiaWdkX2Jlc3RfZWZmb3J0X2ltYWdlOnRlc3QiXX0%3D&_nc_ohc=fqGiAaykoCcQ7kNvwFLm50C&_nc_oc=Adpj9zaS_xQCZ4UPCYevmZr7VY1QgEyz3DYkr_Q9HL5JOK1IOKyAZGC8c7UUguDVc8uqrLE7m0v_9NlU9HZoq7TW&_nc_zt=23&_nc_ht=instagram.fblr1-10.fna&_nc_ss=7a2a8&oh=03_Q7cD5AEv2T7To0e_D9XeaR-6wZWPOojNo_eMHC1NY8x41KPkgw&oe=6A07FFEF" />
-      <img src="https://instagram.fblr1-4.fna.fbcdn.net/v/t1.15752-9/668891456_1308050484611262_8134476629174029739_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=104&ccb=7-5&_nc_sid=fc17b8&efg=eyJxZV9ncm91cHMiOlsiaWdkX2Jlc3RfZWZmb3J0X2ltYWdlOnRlc3QiXX0%3D&_nc_ohc=lLSXkAye9JIQ7kNvwGRMLdP&_nc_oc=Adrz3X3_y14Uy1CVMC6aleYYMryEAh9cdzXytS5yHRh1O9k_ABHMDDpj_83E_TNG_WBuGCpgzWb44EKB9pWALzCT&_nc_zt=23&_nc_ht=instagram.fblr1-4.fna&_nc_ss=7a2a8&oh=03_Q7cD5AF2GuhkfmuMJcWhmBLsEnN9GR8cinIDRYxjXxzaJuJalQ&oe=6A07D940" />
-      <img src="https://instagram.fblr1-9.fna.fbcdn.net/v/t1.15752-9/671471528_945293818230199_4763524397555510868_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=105&ccb=7-5&_nc_sid=fc17b8&efg=eyJxZV9ncm91cHMiOlsiaWdkX2Jlc3RfZWZmb3J0X2ltYWdlOnRlc3QiXX0%3D&_nc_ohc=2owdxrN6xCsQ7kNvwGXv_3N&_nc_oc=AdpYPCxwOljFnS4jWgA4bFuEk4f7MdKb01iL9sSvcaXrCSpuGCbLoaWKq85QcgSe_m0SfslnyfDm1DRDEkGZjLri&_nc_zt=23&_nc_ht=instagram.fblr1-9.fna&_nc_ss=7a2a8&oh=03_Q7cD5AGM1eR3NNanPzuZplrPBAef5NtzZ1wix99ndpqyKjpIJQ&oe=6A07DDA6" />
-      <img src="https://instagram.fblr1-6.fna.fbcdn.net/v/t1.15752-9/669651387_1489868862741394_3752332305481425889_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=102&ccb=7-5&_nc_sid=fc17b8&efg=eyJxZV9ncm91cHMiOlsiaWdkX2Jlc3RfZWZmb3J0X2ltYWdlOnRlc3QiXX0%3D&_nc_ohc=Bk_RIP6t-WYQ7kNvwEXeofG&_nc_oc=Adru6icPYsiFcU24it90kXt8izBRokKYpDxlGNNRtiVcxcF1l8fK3CCAkxrW5KJPsoXmzPdPPJxg5971DLbHUuAg&_nc_zt=23&_nc_ht=instagram.fblr1-6.fna&_nc_ss=7a2a8&oh=03_Q7cD5AH2NrBCTBvjngtvQsOj1cq2QNwyvjVKuDakU3FKmWrWhw&oe=6A0801F4" />
-    </div>
-  </div>
+<!-- ABOUT PAGE -->
+<div id="about" class="card page">
+<h1>About You 💌</h1>
+<p>
+You’re the kind of person who makes everything feel lighter.<br>
+From random talks to the dumbest laughs, everything with you just feels right.<br><br>
+You’ve been there in ways most people aren’t.
+</p>
+<div class="gallery">
+<img src="https://instagram.fblr1-10.fna.fbcdn.net/v/t1.15752-9/672034221_1444132407254615_7433642578671431834_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=109&ccb=7-5&_nc_sid=fc17b8&efg=eyJxZV9ncm91cHMiOlsiaWdkX2Jlc3RfZWZmb3J0X2ltYWdlOnRlc3QiXX0%3D&_nc_ohc=DPL2nQGW_psQ7kNvwHz6Ie9&_nc_oc=Adp1UxD3ef6m5rT4WeEXsLzeIFiKWJuCWrkA68nGVt7t6SLSqcXezcnqR9OnI--wcHCELFoATJ3RVEM98CiVWtSE&_nc_zt=23&_nc_ht=instagram.fblr1-10.fna&_nc_ss=7a2a8&oh=03_Q7cD5AGYeYKXatxt5p88QPvslD8RhquuO7kv7eBqb95nSmFIUQ&oe=6A07FC32">
+<img src="https://instagram.fblr1-9.fna.fbcdn.net/v/t1.15752-9/671471528_945293818230199_4763524397555510868_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=105&ccb=7-5&_nc_sid=fc17b8&efg=eyJxZV9ncm91cHMiOlsiaWdkX2Jlc3RfZWZmb3J0X2ltYWdlOnRlc3QiXX0%3D&_nc_ohc=2owdxrN6xCsQ7kNvwGXv_3N&_nc_oc=AdpYPCxwOljFnS4jWgA4bFuEk4f7MdKb01iL9sSvcaXrCSpuGCbLoaWKq85QcgSe_m0SfslnyfDm1DRDEkGZjLri&_nc_zt=23&_nc_ht=instagram.fblr1-9.fna&_nc_ss=7a2a8&oh=03_Q7cD5AGM1eR3NNanPzuZplrPBAef5NtzZ1wix99ndpqyKjpIJQ&oe=6A07DDA6">
+<img src="https://instagram.fblr1-4.fna.fbcdn.net/v/t1.15752-9/668891456_1308050484611262_8134476629174029739_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=104&ccb=7-5&_nc_sid=fc17b8&efg=eyJxZV9ncm91cHMiOlsiaWdkX2Jlc3RfZWZmb3J0X2ltYWdlOnRlc3QiXX0%3D&_nc_ohc=lLSXkAye9JIQ7kNvwGRMLdP&_nc_oc=Adrz3X3_y14Uy1CVMC6aleYYMryEAh9cdzXytS5yHRh1O9k_ABHMDDpj_83E_TNG_WBuGCpgzWb44EKB9pWALzCT&_nc_zt=23&_nc_ht=instagram.fblr1-4.fna&_nc_ss=7a2a8&oh=03_Q7cD5AF2GuhkfmuMJcWhmBLsEnN9GR8cinIDRYxjXxzaJuJalQ&oe=6A07D940">
+<img src="https://instagram.fblr1-9.fna.fbcdn.net/v/t1.15752-9/672102725_1441045103850129_1404976140649955125_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=105&ccb=7-5&_nc_sid=fc17b8&efg=eyJxZV9ncm91cHMiOlsiaWdkX2Jlc3RfZWZmb3J0X2ltYWdlOnRlc3QiXX0%3D&_nc_ohc=IJLDW_HMgtkQ7kNvwF3hVXV&_nc_oc=AdoRPekuFYkXRoIVQ-Qw9psd8zXjp4TTVPwZbfZ_Q1jeCX2FNAl0EcqfcfQPhBr_st1qSrWusDPxFaT6zAdHrpKo&_nc_zt=23&_nc_ht=instagram.fblr1-9.fna&_nc_ss=7a2a8&oh=03_Q7cD5AHOFZgtM4-lKyIOq2L4ZqhW4U6tpLCrqz6622jdpQZc3Q&oe=6A07EC46">
+</div>
+<button onclick="showPage('home')">⬅ Back</button>
+</div>
+
+<!-- STORY PAGE WITH ANIMATION -->
+<div id="story" class="card page">
+<h1>Our Story 🎥</h1>
+<p id="storyText">Tap next to watch our story</p>
+<div class="scene">
+<div id="you" class="char">🧑</div>
+<div id="siya" class="char">👧</div>
+</div>
+<button onclick="nextStory()">Next ➡</button>
+<button onclick="showPage('home')">⬅ Back</button>
+</div>
+
 </div>
 
 <script>
-  function showMessage() {
-    document.getElementById('message').style.display = 'block';
-  }
+function showPage(id){
+ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+}
+
+let step=0;
+const story=[
+"We lived in the same apartment...",
+"We started talking one day...",
+"And somehow became really close.",
+"Playing football together, standing near the goalpost and chatting...",
+"Cycling together at night in the basement...",
+"Then one day... you moved to Australia.",
+"That send-off day... I cried a lot.",
+"But we didn’t stop.",
+"Reels, random talks, lore drops, video calls...",
+"And now... we’re bestfriends for life 💖"
+];
+
+function nextStory(){
+ if(step<story.length){
+ document.getElementById('storyText').innerText=story[step];
+ step++;
+ }else{
+ document.getElementById('storyText').innerText="Happy Birthday Siya 💖";
+ }
+}
 </script>
 
 </body>
