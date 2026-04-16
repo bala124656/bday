@@ -3,104 +3,119 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday 💖</title>
+  <title>Happy Birthday Siya 💖</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #ffd6e0, #d6f0ff);
+      background: url('https://instagram.fblr1-7.fna.fbcdn.net/v/t1.15752-9/673353634_3149168642137916_7757345522841051120_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=107&ccb=7-5&_nc_sid=fc17b8&efg=eyJxZV9ncm91cHMiOlsiaWdkX2Jlc3RfZWZmb3J0X2ltYWdlOnRlc3QiXX0%3D&_nc_ohc=ryXpEEhiRyEQ7kNvwEX5-zQ&_nc_oc=AdpToKhuxRAp0q-tYmg3cbXgtvY7VRJzKS-rNhpWB5KTVtt9EeU9Gwzkj4bP-CPFtyEohr79Gkr5vfultR5B5hk-&_nc_zt=23&_nc_ht=instagram.fblr1-7.fna&_nc_ss=7a2a8&oh=03_Q7cD5AGvpqz7YS5Iat7MS-LRTyrn_ueXbLRYLUIeeVaTsfOyqQ&oe=6A07D787') no-repeat center/cover;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      overflow: hidden;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(6px);
+      z-index: 0;
     }
 
     .card {
-      background: white;
-      padding: 30px;
+      position: relative;
+      z-index: 1;
+      background: rgba(255,255,255,0.9);
+      padding: 25px;
       border-radius: 25px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
       text-align: center;
       max-width: 350px;
       animation: fadeIn 2s ease;
     }
 
     h1 {
-      color: #ff6f91;
+      color: #ff4d88;
     }
 
     p {
-      color: #555;
-      font-size: 16px;
+      color: #444;
+      font-size: 15px;
     }
 
     button {
-      margin-top: 20px;
+      margin-top: 15px;
       padding: 10px 20px;
       border: none;
       border-radius: 20px;
-      background: #ff6f91;
+      background: #ff4d88;
       color: white;
       cursor: pointer;
       transition: 0.3s;
     }
 
     button:hover {
-      background: #ff3e6c;
+      background: #e6005c;
     }
 
     .hidden {
       display: none;
-      margin-top: 20px;
+      margin-top: 15px;
       animation: fadeIn 2s ease;
+    }
+
+    .gallery {
+      margin-top: 15px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
     }
 
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px);} 
       to { opacity: 1; transform: translateY(0);} 
     }
-
-    .hearts {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      z-index: -1;
-    }
-
-    .heart {
-      position: absolute;
-      color: #ff6f91;
-      animation: float 6s linear infinite;
-      font-size: 20px;
-    }
-
-    @keyframes float {
-      0% { transform: translateY(100vh); opacity: 0; }
-      10% { opacity: 1; }
-      100% { transform: translateY(-10vh); opacity: 0; }
-    }
   </style>
 </head>
 <body>
 
-<div class="hearts"></div>
+<div class="overlay"></div>
 
 <div class="card">
-  <h1>Happy Birthday 🎂</h1>
+  <h1>Happy Birthday Siya 🎂</h1>
   <p>To my favorite person 💕</p>
   <button onclick="showMessage()">Click me 💌</button>
 
   <div id="message" class="hidden">
     <p>
-      Heyyy, I know I can't be there with you, but I made this little place just for you 💖<br><br>
-      You've been such an important part of my life for the past 3 years, and honestly, I wouldn't trade our friendship for anything.
+      Hey Siya 💖<br><br>
+      I know I can't be there with you, but I made this little place just for you.
       <br><br>
-      I hope today makes you smile as much as you make me smile 😊
+      These past 3 years with you mean more than you think, and I wouldn't trade this friendship for anything.
       <br><br>
-      Happy Birthday once again 🫶
+      I hope this makes you smile at least a little 😊
+      <br><br>
+      Happy Birthday again 🫶
     </p>
+
+    <div class="gallery">
+      <!-- ADD YOUR PHOTOS BELOW -->
+      <img src="https://instagram.fblr1-10.fna.fbcdn.net/v/t1.15752-9/551096779_1100038985551211_8668474978410735977_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=109&ccb=7-5&_nc_sid=fc17b8&efg=eyJxZV9ncm91cHMiOlsiaWdkX2Jlc3RfZWZmb3J0X2ltYWdlOnRlc3QiXX0%3D&_nc_ohc=fqGiAaykoCcQ7kNvwFLm50C&_nc_oc=Adpj9zaS_xQCZ4UPCYevmZr7VY1QgEyz3DYkr_Q9HL5JOK1IOKyAZGC8c7UUguDVc8uqrLE7m0v_9NlU9HZoq7TW&_nc_zt=23&_nc_ht=instagram.fblr1-10.fna&_nc_ss=7a2a8&oh=03_Q7cD5AEv2T7To0e_D9XeaR-6wZWPOojNo_eMHC1NY8x41KPkgw&oe=6A07FFEF" />
+      <img src="https://instagram.fblr1-4.fna.fbcdn.net/v/t1.15752-9/668891456_1308050484611262_8134476629174029739_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=104&ccb=7-5&_nc_sid=fc17b8&efg=eyJxZV9ncm91cHMiOlsiaWdkX2Jlc3RfZWZmb3J0X2ltYWdlOnRlc3QiXX0%3D&_nc_ohc=lLSXkAye9JIQ7kNvwGRMLdP&_nc_oc=Adrz3X3_y14Uy1CVMC6aleYYMryEAh9cdzXytS5yHRh1O9k_ABHMDDpj_83E_TNG_WBuGCpgzWb44EKB9pWALzCT&_nc_zt=23&_nc_ht=instagram.fblr1-4.fna&_nc_ss=7a2a8&oh=03_Q7cD5AF2GuhkfmuMJcWhmBLsEnN9GR8cinIDRYxjXxzaJuJalQ&oe=6A07D940" />
+      <img src="https://instagram.fblr1-9.fna.fbcdn.net/v/t1.15752-9/671471528_945293818230199_4763524397555510868_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=105&ccb=7-5&_nc_sid=fc17b8&efg=eyJxZV9ncm91cHMiOlsiaWdkX2Jlc3RfZWZmb3J0X2ltYWdlOnRlc3QiXX0%3D&_nc_ohc=2owdxrN6xCsQ7kNvwGXv_3N&_nc_oc=AdpYPCxwOljFnS4jWgA4bFuEk4f7MdKb01iL9sSvcaXrCSpuGCbLoaWKq85QcgSe_m0SfslnyfDm1DRDEkGZjLri&_nc_zt=23&_nc_ht=instagram.fblr1-9.fna&_nc_ss=7a2a8&oh=03_Q7cD5AGM1eR3NNanPzuZplrPBAef5NtzZ1wix99ndpqyKjpIJQ&oe=6A07DDA6" />
+      <img src="https://instagram.fblr1-6.fna.fbcdn.net/v/t1.15752-9/669651387_1489868862741394_3752332305481425889_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=102&ccb=7-5&_nc_sid=fc17b8&efg=eyJxZV9ncm91cHMiOlsiaWdkX2Jlc3RfZWZmb3J0X2ltYWdlOnRlc3QiXX0%3D&_nc_ohc=Bk_RIP6t-WYQ7kNvwEXeofG&_nc_oc=Adru6icPYsiFcU24it90kXt8izBRokKYpDxlGNNRtiVcxcF1l8fK3CCAkxrW5KJPsoXmzPdPPJxg5971DLbHUuAg&_nc_zt=23&_nc_ht=instagram.fblr1-6.fna&_nc_ss=7a2a8&oh=03_Q7cD5AH2NrBCTBvjngtvQsOj1cq2QNwyvjVKuDakU3FKmWrWhw&oe=6A0801F4" />
+    </div>
   </div>
 </div>
 
@@ -108,23 +123,6 @@
   function showMessage() {
     document.getElementById('message').style.display = 'block';
   }
-
-  const heartsContainer = document.querySelector('.hearts');
-
-  function createHeart() {
-    const heart = document.createElement('div');
-    heart.classList.add('heart');
-    heart.style.left = Math.random() * 100 + 'vw';
-    heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
-    heart.innerText = '💖';
-    heartsContainer.appendChild(heart);
-
-    setTimeout(() => {
-      heart.remove();
-    }, 6000);
-  }
-
-  setInterval(createHeart, 300);
 </script>
 
 </body>
