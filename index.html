@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ffd6e0, #d6f0ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 350px;
+      animation: fadeIn 2s ease;
+    }
+
+    h1 {
+      color: #ff6f91;
+    }
+
+    p {
+      color: #555;
+      font-size: 16px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      background: #ff6f91;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff3e6c;
+    }
+
+    .hidden {
+      display: none;
+      margin-top: 20px;
+      animation: fadeIn 2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px);} 
+      to { opacity: 1; transform: translateY(0);} 
+    }
+
+    .hearts {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .heart {
+      position: absolute;
+      color: #ff6f91;
+      animation: float 6s linear infinite;
+      font-size: 20px;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh); opacity: 0; }
+      10% { opacity: 1; }
+      100% { transform: translateY(-10vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="hearts"></div>
+
+<div class="card">
+  <h1>Happy Birthday 🎂</h1>
+  <p>To my favorite person 💕</p>
+  <button onclick="showMessage()">Click me 💌</button>
+
+  <div id="message" class="hidden">
+    <p>
+      Heyyy, I know I can't be there with you, but I made this little place just for you 💖<br><br>
+      You've been such an important part of my life for the past 3 years, and honestly, I wouldn't trade our friendship for anything.
+      <br><br>
+      I hope today makes you smile as much as you make me smile 😊
+      <br><br>
+      Happy Birthday once again 🫶
+    </p>
+  </div>
+</div>
+
+<script>
+  function showMessage() {
+    document.getElementById('message').style.display = 'block';
+  }
+
+  const heartsContainer = document.querySelector('.hearts');
+
+  function createHeart() {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+    heart.innerText = '💖';
+    heartsContainer.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 6000);
+  }
+
+  setInterval(createHeart, 300);
+</script>
+
+</body>
+</html>
